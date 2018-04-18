@@ -1791,6 +1791,8 @@ ul li a:focus {
   }
 
   .navbar {
+      /*edited Prishtina v2*/
+      background: inherit;
     height: 55px;
     background-color: #2196F3;
     color: #fff;
