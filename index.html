@@ -1,3 +1,14 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +45,7 @@
           <div class="col-md-12 nav-wrapper">
             <div class="navbar-header" style="width:100%;">
               <div class="opener-left-menu is-open">
+				<button type="button">Logout</button>
                 <span class="top"></span>
                 <span class="middle"></span>
                 <span class="bottom"></span>
@@ -191,7 +203,8 @@
                         </li>
                       </ul>
                     </li>
-                    <li><a href="credits.html">Credits</a></li>
+					<li class="ripple"><a class="tree-toggle nav-header"><span class="fa "></span><a href=""logout.php"> Logout </a> <span class="fa-angle-right fa right-arrow text-right"></span> </a></li>
+                    <li><a href="logout.php">Logout</a></li>
                   </ul>
                 </div>
             </div>
@@ -248,6 +261,30 @@
                 <div class="col-md-12" style="padding:20px;">
                     <div class="col-md-12 padding-0">
                         <div class="col-md-8 padding-0">
+							<!--NEW MAP--><div >
+							
+								<div id="map" style="height: 400px;width: 100%;"></div>
+								<script>
+								  function initMap() {
+									var uluru = {lat: 40.640, lng: 22.944};
+									var map = new google.maps.Map(document.getElementById('map'), {
+									  zoom: 4,
+									  center: uluru
+									});
+									var marker = new google.maps.Marker({
+									  position: uluru,
+									  map: map
+									});
+								  }
+								</script>
+								<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArV2USjBYl8wxtIwB6cGlFmWUGNaR7Irk&callback=initMap">
+								</script>
+  
+
+							
+
+							</div>
                             <div class="col-md-12 padding-0">
                                 <div class="col-md-6">
                                     <div class="panel box-v1">
