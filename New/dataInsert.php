@@ -34,11 +34,11 @@
   
 		  if ($user) { // if user exists
 			if ($user['userName'] === $userName) {
-			  array_push($errors, "Username already exists");
+			  array_push($errors, "Username already exists");//funksionon;me bo me pop up
 			}
 
 			if ($user['email'] === $email) {
-			  array_push($errors, "email already exists");
+			  array_push($errors, "email already exists");//funksionon;me bo me pop up
 			}
 		  }
 
@@ -47,9 +47,9 @@
   
 			  $sql="INSERT INTO `user`(`firstName`, `lastName`, `userName`, `email`, `pwd`) VALUES ('$firstName','$lastName','$userName','$email','$pwd')";
 				mysqli_query($conn, $sql);
-				$_SESSION['username'] = $username;
-				$_SESSION['success'] = "You are now logged in";
-				header('location: tabela.php');
+				//$_SESSION['username'] = $username;
+				//$_SESSION['success'] = "You are now logged in";
+				header('location: login.php');//ndroja location nese sbon
 				
 			}			
 		
@@ -74,9 +74,9 @@
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: index.php');
+  	  header('location: index.html');//ndroja location nese sbon
   	}else {
-  		array_push($errors, "Wrong username/password combination");
+  		array_push($errors, "Wrong username/password combination");//funksionon;me bo me pop up
   	}
   }
 }

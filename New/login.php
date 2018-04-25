@@ -1,4 +1,4 @@
-`<?php include ('insert.php')?>
+<?php include ('dataInsert.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +58,7 @@
               </div>
                 <div class="text-center" style="padding:5px;">
                     <a href="forgotpass.html">Forgot Password </a>
-                    <a href="form.html">| Signup</a>
+                    <a href="SignUp.html">| Signup</a>
                 </div>
           </div>
         </form>
