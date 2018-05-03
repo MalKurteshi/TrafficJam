@@ -1,3 +1,4 @@
+<?php require ('connection.php')?>
 <?php include ('dataInsert.php')?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,8 +58,8 @@
                   <input type="submit" class="btn col-md-12" name="login" value="SignIn"/>
               </div>
                 <div class="text-center" style="padding:5px;">
-                    <a href="forgotpass.html">Forgot Password </a>
-                    <a href="SignUp.html">| Signup</a>
+<!--                    <a href="forgotpass.html">Forgot Password </a>-->
+                    <a href="SignUp.html"> Register</a>
                 </div>
           </div>
         </form>

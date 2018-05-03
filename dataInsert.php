@@ -1,16 +1,5 @@
 <?php
-			$servername = "localhost";
-			$username = 'root';
-			$password = '';
-			$db = 'trafficDb';
-			$errors=array();
-		// Create connection
-			$conn = mysqli_connect($servername, $username, $password, $db);
 
-		/*	if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-			} 
-			echo "Connected successfully";*/
 			
 	if(isset($_POST['submit']))
 	{
@@ -51,7 +40,7 @@
 				mysqli_query($conn, $sql);
 				//$_SESSION['username'] = $username;
 				//$_SESSION['success'] = "You are now logged in";
-				header('location: mainpagetest.html');
+				header('location: login.php');
 				
 			}			
 		
@@ -76,7 +65,7 @@
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: mainpagetest.html');// Done ridirect
+  	  header('location: reportEvent.php');// Done ridirect
   	}else {
 
         echo "<script>alert('\"Wrong username/password combination\"')</script>"; // solution for pop up
